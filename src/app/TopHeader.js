@@ -1,5 +1,6 @@
 import React from 'react';
-
+import TopLeft from './TopLeft';
+import TopRight from './TopRight';
 
 import {
   blue300,
@@ -13,18 +14,16 @@ import {
 const style = {margin: 5}; 
 
 const TopHeader = () => (
-  <header className="topbar"> 
+  <header className="topbar is_stuck"
+    style={{position: 'fixed', top: '0px', width: '100%'}}
+    > 
     <nav className="navbar top-navbar navbar-toggleable-sm navbar-light">
       <div className="navbar-header">
-        <a className="navbar-brand" href="index.html">
-          <b>
-            <img src="images/logo-light-icon.png" className="light-logo" />
-          </b>
-        </a>
+        <TopLeft />
       </div>
 
       <div className="navbar-collapse">
-        
+        <TopRight />
       </div>
     </nav>
   </header>

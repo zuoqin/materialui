@@ -9,7 +9,7 @@ import {deepOrange500} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AvatarExampleSimple from './AvatarExampleSimple';
+import Members from './Members';
 
 import TopHeader from './topheader';
 import LeftSide from './LeftSide';
@@ -60,10 +60,16 @@ class Main extends Component {
 
     return (
       <div>
+
         <MuiThemeProvider muiTheme={muiTheme}>
           <TopHeader />
 
         </MuiThemeProvider>
+        <div
+          style={{position: 'relative', width: '100%', height: '90px', display: 'block',
+            verticalAlign: 'baseline', float: 'none'}}
+        >
+        </div>
 
         <MuiThemeProvider muiTheme={muiTheme}>
           <LeftSide />
@@ -74,11 +80,6 @@ class Main extends Component {
           <RightSide />
         </MuiThemeProvider>
 
-
-        <MuiThemeProvider muiTheme={muiTheme}>
-          
-          <AvatarExampleSimple />
-        </MuiThemeProvider>
       </div>
 
     );

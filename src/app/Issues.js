@@ -3,7 +3,12 @@ import Avatar from 'material-ui/Avatar';
 import FileFolder from 'material-ui/svg-icons/file/folder';
 import FontIcon from 'material-ui/FontIcon';
 import List from 'material-ui/List/List';
+import Chip from 'material-ui/Chip';
 import ListItem from 'material-ui/List/ListItem';
+import BugReport from 'material-ui/svg-icons/action/bug-report';
+import Settings from 'material-ui/svg-icons/action/settings';
+import Question from 'material-ui/svg-icons/action/question-answer';
+
 
 import {
   blue300,
@@ -12,6 +17,8 @@ import {
   deepOrange300,
   pink400,
   purple500,
+  blueA700,
+  lime900,
 } from 'material-ui/styles/colors';
 
 const style = {margin: 5};
@@ -20,50 +27,60 @@ const avatarsubtext = { color: 'grey'};
 
 const Issues = () => (
   <div>
-    <div>Issues Tracking
+    <div className="col-md-8" style={{fontSize: 'x-large', marginTop: '30px'}}>Issue tracking
     </div>
     <List>
       <ListItem
         disabled={true}
-        primaryText="Designer"
-        secondaryText="SMM | 11:39"
+        primaryText="Bug"
+        secondaryText=""
         leftAvatar={
-          <Avatar 
-            style="paddingBottom: 0px"
-            src="images/uxceo-128.jpg" />
+           <Avatar backgroundColor='transparent' color='lightgrey' size={50} icon={<BugReport />} />
         }
-        rightAvatar={<h5>kjhkjhkj</h5>}
+        rightAvatar={
+          <Chip
+            backgroundColor={blue300}
+          >
+            1/2/4
+          </Chip>
+        }
       >
       </ListItem>
 
 
       <ListItem
         disabled={true}
+        primaryText="Support"
+        secondaryText=""        
         leftAvatar={
-          <Avatar 
-            style="paddingBottom: 0px"
-            src="images/uxceo-128.jpg" />
+          <Avatar backgroundColor='transparent' color='lightgrey' size={50} icon={<Settings />} />
+        }
+        rightAvatar={
+          <Chip
+            backgroundColor={lime900}
+          >
+            2/4/8
+          </Chip>
         }
       >
-        <div style={avatartext} >Designer
-        </div>
-        <div style={avatarsubtext}>
-        </div>
       </ListItem>
 
 
       <ListItem
         disabled={true}
+        primaryText="Question"
+        secondaryText=""        
         leftAvatar={
-          <Avatar 
-            style="paddingBottom: 0px"
-            src="images/uxceo-128.jpg" />
+          <Avatar backgroundColor='transparent' color='lightgrey' size={50} icon={<Question />} />
+        }
+        rightAvatar={
+          <Chip
+            backgroundColor={blueA700}
+          >
+            1/3/7
+          </Chip>
         }
       >
-        <div style={avatartext} >Designer
-        </div>
-        <div style={avatarsubtext}>SMM | 11:39
-        </div>
       </ListItem>
     </List>
   </div>
